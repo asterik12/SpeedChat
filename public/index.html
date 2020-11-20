@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+			integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="./css/main.css">
+		<link rel="stylesheet" href="css/modal.css">
+		  <script src="js/modal.js"></script>
+		  
+		<title>SpeedChat App</title>
+
+		
+	</head>
+	<body style="background-image: url('./assets/img/poster-background.png');
+				    background-attachment: fixed;
+					background-repeat: no-repeat;
+					">
+		<div class="header">
+			
+			<h1><i class="fa fa-comments" aria-hidden="true"></i> SpeedChat</h1>
+		  </div>
+		<div class="row">
+		
+			<div class="col-6 col-s-9">
+			  <p class="heading-1">SpeedChat
+			  </p>
+			  <p class="content-inside">Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p>
+			  <div class="join-container">
+				
+				<main class="join-main">
+					<form action="chat.html">
+						<div class="form-control">
+							<label for="username" class="label">Username</label>
+							<input
+								type="text"
+								name="username"
+								id="username"
+								autocomplete="off"
+								style="text-transform: uppercase;"
+								placeholder="Enter username..."
+								required
+							/>
+						</div>
+						<div class="form-control">
+							<label for="room"  class="label">Meeting ID</label>
+							
+							<input
+								type="text"
+								name="room"
+								id="room"
+								style="text-transform: uppercase;"
+								autocomplete="off"
+								placeholder="Enter meeting id..."
+								required
+							/>
+							
+						</div>
+						<button type="submit" class="btn-join">Join Now</button>
+						
+					</form>
+					
+				</main>
+				<header class="join-header">
+					<script src="./js/randomtext.js"></script>
+					<button class="btn-join" id="myBtn">
+						<i class="fa fa-plus" aria-hidden="true"></i>
+
+						New Meeting
+					</button>
+					
+					<!-- The Modal -->
+					<div id="myModal" class="modal">
+						
+						<!-- Modal content -->
+						   <div class="modal-content">
+							 <div class="modal-header">
+							   <span class="close">&times;</span>
+							   <h2> Meeting ID</h2>
+							 </div>
+							 <div class="modal-body">
+								 <p style="display: inline-flex;">
+									<button class="btn-join" onclick="randomvalue()">
+										<i class="fa fa-plus" aria-hidden="true"></i>
+				
+										Get Meeting ID
+									</button>
+									<p style="display: inline-flex !important;">
+										<div id="getRandom" style="text-transform: uppercase;" >
+											
+										</div>
+											
+											
+										<a id="button1" onclick="CopyToClipboard('getRandom')" 
+											style="cursor: pointer; " title="Copy To Clipboard">
+											<i class="fas fa-copy"></i>
+										</a>
+									</p>
+									
+									
+									
+								 </p>
+								
+								
+							 </div>
+							 <div class="modal-footer">
+							   
+							 </div>
+						   </div>
+						 
+						 </div>
+						 <script>
+							// Get the modal
+							var modal = document.getElementById("myModal");
+							
+							// Get the button that opens the modal
+							var btn = document.getElementById("myBtn");
+							
+							// Get the <span> element that closes the modal
+							var span = document.getElementsByClassName("close")[0];
+							
+							// When the user clicks the button, open the modal 
+							btn.onclick = function() {
+							  modal.style.display = "block";
+							}
+							
+							// When the user clicks on <span> (x), close the modal
+							span.onclick = function() {
+							  modal.style.display = "none";
+							}
+							
+							// When the user clicks anywhere outside of the modal, close it
+							window.onclick = function(event) {
+							  if (event.target == modal) {
+								modal.style.display = "none";
+							  }
+							}
+							</script>
+					
+					
+					
+					
+				</header>
+			</div>
+			</div>
+		  
+			<div class="col-3 col-s-12">
+			  
+				<img src="./assets/img/poster.jpg" alt="" class="poster-img">	
+			  
+			</div>
+		  </div>
+
+		  
+		
+	</body>
+</html>
